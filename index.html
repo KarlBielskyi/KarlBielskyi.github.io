@@ -1,60 +1,130 @@
-<!-- (continue from your current HTML) -->
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Karl's CS Portfolio</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background: #e0f7fa;
+      text-align: center;
+      padding: 20px;
+    }
+    h1 {
+      color: #006064;
+    }
+    .profile-img {
+      width: 200px;
+      border-radius: 100px;
+      margin: 10px;
+    }
+    .section {
+      margin-top: 40px;
+    }
+    a {
+      color: #004d40;
+      text-decoration: none;
+      font-weight: bold;
+    }
+    .code-block {
+      font-family: monospace;
+      background: #f9f9f9;
+      padding: 15px;
+      margin-top: 10px;
+      overflow-x: auto;
+      border-left: 5px solid #4db6ac;
+      border-radius: 8px;
+      box-shadow: 2px 2px 8px rgba(0,0,0,0.05);
+      text-align: left;
+      width: 80%;
+      margin-left: auto;
+      margin-right: auto;
+    }
+  </style>
+</head>
+<body>
 
-<div class="section">
-  <h2>Project 2 • Climate Action Slide Presentation</h2>
+  <h1>Karl's Portfolio</h1>
+  <p><em>"Coding for a better, sustainable world."</em></p>
+  <img src="profile.jpg" class="profile-img" alt="Karl's photo">
 
-  <!-- Slide Presentation Embed -->
-  <iframe width="410" height="460"
-     src="https://academy.cs.cmu.edu/sharing/floralWhiteFish641585/embed"
-     frameborder="0" allowfullscreen>
-  </iframe>
-
-  <h3>Description</h3>
-  <p>
-    This project supports <strong>SDG 13: Climate Action</strong>. I built an interactive Python slide presentation showing the impact of rising temperatures on the environment and wildlife.
-    Each slide reveals a new aspect—from CO₂ emissions to habitat destruction, ending with actionable solutions. It’s a powerful combination of visual storytelling and programming!
-  </p>
-
-  <h3>Concepts Learned</h3>
-  <ul style="list-style:none;">
-    <li>✅ Slide-based storytelling with conditional logic</li>
-    <li>✅ Custom Python functions and interactivity</li>
-    <li>✅ SDG data visualization and awareness</li>
-  </ul>
-
-  <h3>Code Sample</h3>
-  <div class="code-block">
-<pre>
-# Climate Action Project – by Karl
-def co2(x,y,color):
-    Rect(x-30,y-30,60,60,fill=color)
-    Line(x,y,x-20,y-20,fill='gold',lineWidth=3)    
-    Line(x,y,x+20,y-20,fill='gold',lineWidth=3)
-    Circle(x+20,y-20,7,fill='red')
-    Circle(x-20,y-20,7,fill='red')
-    Circle(x,y,10,fill='black')
-    Label('CO2',x,y+25)
-
-def Sun(x,y,color):
-    Star(x,y,70,60,fill=color)
-    Circle(x,y,30,fill=None,border='white')
-
-def drawBearFace():
-    Circle(170,175,15,fill='white')
-    Circle(230,170,15, fill='white')
-    Oval(200,200,80,60,fill='white')
-    Circle(185,190,8,fill='black')
-    Circle(215,190,8,fill='black')
-    Circle(200,210,6, fill='black')
-</pre>
+  <div class="section">
+    <h2>About Me</h2>
+    <p>I’m an honors CS student who loves diving deep into oceans and algorithms. I use tech to tackle global issues, especially the UN Sustainable Development Goals.</p>
   </div>
 
-  <h3>How It Solves the Goal</h3>
-  <p>
-    The slides raise awareness about global warming and its dangers—highlighting rising CO₂, wildlife threats, and climate-related statistics. It ends by showing solutions, like renewable energy and cooperation between countries.
-    It’s a meaningful way to use code to educate and inspire climate action.
-  </p>
+  <div class="section">
+    <h2>Interests</h2>
+    <p>Diving • Sustainability • UN Global Goals • JavaScript • Game Design</p>
+    <img src="sdg_grid.png" alt="UN SDG icons" width="300">
+  </div>
 
-  <h3>Visual: Slide Demo Screenshot</h3>
-  <img src="climate_screenshot.png" alt="Climate Action Slide Screenshot" width="400">
-</div>
+  <div class="section">
+    <h2>Projects</h2>
+    <p><a href="#project1">🌍 Global Goals Project</a></p>
+    <p><a href="#project2">🌡️ Climate Action Project</a></p>
+  </div>
+
+  <hr>
+
+  <div id="project1" class="section">
+    <h2>Project 1 • Tackling SDG 2 & 7 with Python Graphics</h2>
+    <iframe width="410" height="460" src="https://academy.cs.cmu.edu/sharing/lawnGreenCamel277031/embed" frameborder="0" allowfullscreen></iframe>
+    <h3>Description</h3>
+    <p>I wrote a Python graphics program using shapes (ovals, rectangles, lines, labels) to visually represent two SDGs: <strong>Zero Hunger (SDG 2)</strong> and <strong>Affordable & Clean Energy (SDG 7)</strong>.</p>
+    <h3>Concepts Learned</h3>
+    <ul style="list-style:none;">
+      <li>✅ Python procedural drawing (shapes, colors)</li>
+      <li>✅ Coordinate system and layering</li>
+      <li>✅ Using code for visual storytelling of SDGs</li>
+    </ul>
+    <h3>Code Sample</h3>
+    <div class="code-block">
+<pre>
+Oval(150, 86, 60, 30, fill='white')
+Rect(120, 58, 60, 30, fill='white')
+Line(120,50,140,30, fill='white')
+Line(150,50,150,30, fill='white')
+Line(170,50,150,30, fill='white')
+Label('Zero', 80, 20, size=13, fill='white', bold=True)
+Label('Hunger', 80, 35, size=13, fill='white', bold=True)
+
+Oval(250,80,40,40, fill='white')
+Line(250,70,230,45, fill='white')
+Line(255,70,260,40, fill='white')
+Line(265,70,280,50, fill='white')
+Label('Affordable and clean energy', 286,20, size=12, fill='white', bold=True)
+</pre>
+    </div>
+  </div>
+
+  <div id="project2" class="section">
+    <h2>Project 2 • Climate Action Slide Presentation</h2>
+    <iframe width="410" height="460" src="https://academy.cs.cmu.edu/sharing/floralWhiteFish641585/embed" frameborder="0" allowfullscreen></iframe>
+    <h3>Description</h3>
+    <p>This project supports <strong>SDG 13: Climate Action</strong>. I built an interactive Python slide presentation showing the impact of rising temperatures on the environment and wildlife.</p>
+    <h3>Concepts Learned</h3>
+    <ul style="list-style:none;">
+      <li>✅ Slide-based storytelling with conditional logic</li>
+      <li>✅ Custom Python functions and interactivity</li>
+      <li>✅ SDG data visualization and awareness</li>
+    </ul>
+    <h3>Code Sample</h3>
+    <div class="code-block">
+<pre>
+def Sun(x, y, color):
+    Star(x, y, 70, 60, fill=color)
+    Circle(x, y, 30, fill=None, border='white')
+
+Sun(200, 200, 'gold')
+Label("Problems with Climate Change:", 200, 200)
+Label("Climate change presents a multitude of problems by impacting the environment.", 200, 280, size=11)
+Label("Drought can harm food production and human health.", 200, 300, size=11)
+Label("Impacting biodiversity and nature, water and food security", 200, 320, size=11)
+Label("It disproportionately affects vulnerable populations", 200, 340, size=12)
+</pre>
+    </div>
+    <p>This slide combines visuals and facts to raise awareness about climate change and solutions.</p>
+  </div>
+
+</body>
+</html>
