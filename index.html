@@ -12,11 +12,6 @@
     h1 {
       color: #006064;
     }
-    .profile-img {
-      width: 200px;
-      border-radius: 100px;
-      margin: 10px;
-    }
     .section {
       margin-top: 40px;
     }
@@ -45,7 +40,6 @@
 
   <h1>Karl's Portfolio</h1>
   <p><em>"Coding for a better, sustainable world."</em></p>
-  <img src="profile.jpg" class="profile-img" alt="Karl's photo">
 
   <div class="section">
     <h2>About Me</h2>
@@ -55,13 +49,13 @@
   <div class="section">
     <h2>Interests</h2>
     <p>Diving • Sustainability • UN Global Goals • JavaScript • Game Design</p>
-    <img src="sdg_grid.png" alt="UN SDG icons" width="300">
   </div>
 
   <div class="section">
     <h2>Projects</h2>
     <p><a href="#project1">🌍 Global Goals Project</a></p>
     <p><a href="#project2">🌡️ Climate Action Project</a></p>
+    <p><a href="#project3">🎮 Zero Hunger Game</a></p>
   </div>
 
   <hr>
@@ -124,6 +118,20 @@ Label("It disproportionately affects vulnerable populations", 200, 340, size=12)
 </pre>
     </div>
     <p>This slide combines visuals and facts to raise awareness about climate change and solutions.</p>
+  </div>
+
+  <div id="project3" class="section">
+    <h2>Project 3 • Zero Hunger Clicker Game</h2>
+    <iframe width="410" height="460" src="https://academy.cs.cmu.edu/sharing/violetShark827378/embed" frameborder="0" allowfullscreen></iframe>
+    <h3>Description</h3>
+    <p>In this project, I created a game supporting <strong>SDG 2: Zero Hunger</strong>. The goal is to click the screen 12 times to reduce hunger and raise awareness about the issue.</p>
+    <p>The game uses Python’s <code>if</code> statements and functions to create interactive behavior. It includes an interesting feature: if you click before the x-position of 200, your score increases by 2. If you click after 200, your score also increases by 2—but through a different logic branch.</p>
+    <h3>Concepts Learned</h3>
+    <ul style="list-style:none;">
+      <li>✅ Python conditional statements (<code>if</code>)</li>
+      <li>✅ User interaction and scoring system</li>
+      <li>✅ Game mechanics linked to real-world goals</li>
+    </ul>
   </div>
 
 </body>
