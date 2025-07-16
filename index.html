@@ -60,6 +60,7 @@
 
   <hr>
 
+  <!-- Project 1 -->
   <div id="project1" class="section">
     <h2>Project 1 • Tackling SDG 2 & 7 with Python Graphics</h2>
     <iframe width="410" height="460" src="https://academy.cs.cmu.edu/sharing/lawnGreenCamel277031/embed" frameborder="0" allowfullscreen></iframe>
@@ -91,6 +92,7 @@ Label('Affordable and clean energy', 286,20, size=12, fill='white', bold=True)
     </div>
   </div>
 
+  <!-- Project 2 -->
   <div id="project2" class="section">
     <h2>Project 2 • Climate Action Slide Presentation</h2>
     <iframe width="410" height="460" src="https://academy.cs.cmu.edu/sharing/floralWhiteFish641585/embed" frameborder="0" allowfullscreen></iframe>
@@ -120,19 +122,63 @@ Label("It disproportionately affects vulnerable populations", 200, 340, size=12)
     <p>This slide combines visuals and facts to raise awareness about climate change and solutions.</p>
   </div>
 
+  <!-- Project 3 -->
   <div id="project3" class="section">
     <h2>Project 3 • Zero Hunger Clicker Game</h2>
     <iframe width="410" height="460" src="https://academy.cs.cmu.edu/sharing/violetShark827378/embed" frameborder="0" allowfullscreen></iframe>
+    
     <h3>Description</h3>
-    <p>In this project, I created a game supporting <strong>SDG 2: Zero Hunger</strong>. The goal is to click the screen 12 times to reduce hunger and raise awareness about the issue.</p>
-    <p>The game uses Python’s <code>if</code> statements and functions to create interactive behavior. It includes an interesting feature: if you click before the x-position of 200, your score increases by 2. If you click after 200, your score also increases by 2—but through a different logic branch.</p>
+    <p>This interactive game supports <strong>SDG 2: Zero Hunger</strong>. Your goal is to click the screen 12 times to reduce hunger. The game includes a scoring system based on where you click on the screen.</p>
+    <p>If you click on the left side (x &lt; 200), your score increases by 2. If you click on the right side (x ≥ 200), your score also increases by 2. When your score reaches 12, a success message appears. This project demonstrates how simple Python code and logic can be used to build games with meaningful messages.</p>
+    
     <h3>Concepts Learned</h3>
     <ul style="list-style:none;">
-      <li>✅ Python conditional statements (<code>if</code>)</li>
-      <li>✅ User interaction and scoring system</li>
-      <li>✅ Game mechanics linked to real-world goals</li>
+      <li>✅ Conditional logic with <code>if</code> statements</li>
+      <li>✅ Python drawing and interactivity</li>
+      <li>✅ Score tracking and user feedback</li>
     </ul>
+
+    <h3>Code Sample</h3>
+    <div class="code-block">
+<pre>
+Rect(0, 0, 400, 400, fill='aqua')
+
+Circle(205, 205, 155, fill='saddleBrown')
+Circle(200, 200, 150, fill='peru')
+
+def drawChocoChips(centerX, centerY):
+    Circle(centerX, centerY, 16, fill=rgb(90, 35, 15))
+
+drawChocoChips(140, 90)
+drawChocoChips(215, 150)
+drawChocoChips(275, 100)
+drawChocoChips(315, 200)
+drawChocoChips(270, 300)
+drawChocoChips(230, 240)
+drawChocoChips(150, 315)
+drawChocoChips(150, 245)
+drawChocoChips(80, 220)
+drawChocoChips(120, 155)
+drawChocoChips(190, 200)
+
+counter = Label(0, 195, 200, italic=True, font='courier', fill='yellow', size=23, bold=True)
+message = Label("Collect 12 cookies to fight hunger!", 200, 20, size=20, fill='black')
+
+def onMousePress(x, y):
+    if counter.value < 12:
+        if x < 200:
+            counter.value += 2
+        elif x >= 200:
+            counter.value += 2
+
+    if counter.value >= 12:
+        message.value = "Goal achieved! Hunger reduced!"
+        message.size = 25
+        message.fill = 'green'
+</pre>
+    </div>
   </div>
 
 </body>
 </html>
+
